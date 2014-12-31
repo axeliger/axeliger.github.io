@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <title>Omgjord design för Expedia</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+</head>
+<body>
+  <div id="site-wrapper">
+    <div id="site-canvas">
+    <div id="overlay"></div>
+      <header class="container-fluid">
+        <div id="top-area" class="row">
+          <div id="top-banner" class="col-sm-4 col-sm-offset-8 col-md-3 col-md-offset-9"> 
+            <nav id="top-nav" class="h-list">
+              <ul>
+                <li><a href="#">Logga in</a></li>
+                <li><a href="#">Mina resor</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Om Expedia</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="row">
+          <div id="main-banner" class="col-xs-12">
+            <div id="logo-container">
+              <a href="#"><img id="banner-logo" src="img/logo.png" title="Logo"></a>
+            </div>
+            <nav id="main-nav">
+              <div id="main-nav-header">
+                <span id="mobile-nav-title">Meny</span>
+                <a href="#" class="toggle-nav-btn toggle-inside btn btn-lg"><i class="fa fa-close fa-lg"></i></a>
+              </div>
+              <ul id="top-nav-replace">
+                <li><a href="#">Logga in<i class="fa fa-angle-right fa-lg"></i></a></li>
+                <li><a href="#">Mina resor<i class="fa fa-angle-right fa-lg"></i></a></li>
+                <li><a href="#">Kontakt<i class="fa fa-angle-right fa-lg"></i></a></li>
+                <li><a href="#">Om Expedia<i class="fa fa-angle-right fa-lg"></i></a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Hotell<i class="fa fa-angle-right fa-lg"></i></a></li>
+                <li><a href="#">Flyg<i class="fa fa-angle-right fa-lg"></i></a></li>
+                <li><a href="#">Hyrbil<i class="fa fa-angle-right fa-lg"></i></a></li>
+                <li><a href="#">Erbjudanden<i class="fa fa-angle-right fa-lg"></i></a></li>
+                <li><a href="#">Sista minuten<i class="fa fa-angle-right fa-lg"></i></a></li>
+                <li id="contact-list-item"><a href="#">Kontakt <i class="fa fa-chevron-down"></i><i class="fa fa-angle-right fa-lg"></i></a></li>
+              </ul>
+            </nav>
+            <div id="contact-bar" class="h-list">
+              <ul>
+                <li><i class="fa fa-phone fa-2x"></i></li>
+                <li><i class="fa fa-envelope fa-2x"></i></li>
+              </ul>
+            </div>
+            <a href="#" class="toggle-nav-btn toggle-outside btn btn-lg"><i class="fa fa-bars"></i></a>
+          </div>
+        </div>
+      </header>
+      <div class="container-fluid">
+        <section id="main-area" class="row">
+          <div id="selector-panel" class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-8 col-md-3 col-md-offset-9">
+            <select id="booking-type">
+             <option value="flyg">Flyg</option>
+             <option value="hotell">Hotell</option>
+             <option value="hyrbil">Hyrbil</option>
+            </select> 
+            <form id="main-area-booking">
+              <input id="booking-from" type="text" name="from" placeholder="Från">
+              <input id="booking-to" type="text" name="to" placeholder="Till">
+              <input id="booking-date1" type="text" name="date1" placeholder="Avresa">
+              <input id="booking-date2" type="text" name="date2" placeholder="Återresa">
+            </form>
+            <button id="booking-button" form="book" type="submit">Sök</button>
+          </div>
+        </section>
+      </div>
+      <div id="lower-page" class="container">
+        <div class="row">
+          <!-- SOCIALA MEDIER OCH NYHETSBREV-->
+          <section id="follow-full-panel" class="col-sm-12">
+          </section>
+        </div>
+        <div class="row">
+          <!-- ERBJUDANDEN OCH BRANDING-->
+          <section id="left-half-panel" class="col-sm-6">
+          </section>
+          <section id="right-half-panel" class="col-sm-6">
+          </section>
+        </div>
+          <!-- BILDSPEL PÅ RESMÅL-->
+        <section class="row">
+          <article class="col-sm-2 destination-box"></article>
+          <article class="col-sm-2 destination-box"></article>
+          <article class="col-sm-2 destination-box"></article>
+          <article class="col-sm-2 destination-box"></article>
+          <article class="col-sm-2 destination-box"></article>
+          <article class="col-sm-2 destination-box"></article>
+        </section>
+      </div>
+      <footer class="row">
+        <!-- SIDFOT MED INTERNLÄNKAR OCH FÖRETAGSINFORMATION-->
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4"></div>
+      </footer>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/menu.js"></script>
+</body>
+</html>
