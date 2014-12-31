@@ -1,0 +1,408 @@
+/*** Colors:
+#00365e - Dark blue
+#0065b8 - Clear blue
+#dcdcdc	- Medium gray
+#f5f5f5 - Light gray
+#fefffc - Super light gray
+#ffc50b - Yellow
+***/
+
+/***** TYPOGRAPHY *****/
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto_regular_swedish/Roboto-Regular-webfont.eot');
+    src: url('../fonts/roboto_regular_swedish/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto_regular_swedish/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/roboto_regular_swedish/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/roboto_regular_swedish/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../fonts/roboto_medium_swedish/Roboto-medium-webfont.eot');
+    src: url('../fonts/roboto_medium_swedish/Roboto-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto_medium_swedish/Roboto-medium-webfont.woff') format('woff'),
+         url('../fonts/roboto_medium_swedish/Roboto-medium-webfont.ttf') format('truetype'),
+         url('../fonts/roboto_medium_swedish/Roboto-medium-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+h1, h2, h3, h4, h5, h6, select, form, button, li, a {
+	font-family: 'robotomedium', Helvetica, Sans-serif;
+}
+
+#site-wrapper {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+#site-canvas {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+
+    -webkit-transition: 250ms ease all;
+    -moz-transition: 250ms ease all;
+    -o-transition: 250ms ease all;
+    transition: 250ms ease all;
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.show-nav #site-canvas {
+	-webkit-transform: translate3d(200px, 0, 0);  
+	-moz-transform: translate3d(200px, 0, 0);
+    transform: translate3d(200px, 0, 0);
+}
+.toggle-nav-btn {
+	border-style: solid;
+	border-width: 2px;
+}
+.toggle-inside {
+	border-color: #dcdcdc;
+	background: none;
+	position: relative;
+	float: right;
+	margin-top: 13px;
+	margin-right: 15px;
+}
+.toggle-outside {
+	float: right;
+	margin-right: 8.33333333%;
+	border-color: #f5f5f5;
+	background: none;
+}
+#top-area {
+	display: none;
+}
+#top-nav-replace {
+	display: block;
+	margin-top: 50px;
+}
+#top-nav-replace li:first-child {
+	border-top: 1px solid #dcdcdc;
+}
+@media (min-width: 768px) {
+	#top-area {
+		display: block;
+	}
+	#top-nav-replace {
+		display: none;
+	}
+	.toggle-nav-btn {
+		display: none;
+	}
+	.show-nav #site-canvas {
+		-webkit-transform: translate3d(0, 0, 0);  
+		-moz-transform: translate3d(0, 0, 0);
+	    transform: translate3d(0, 0, 0);
+	}
+}
+#top-area {
+	height: 30px;
+	background: #00365e;
+}
+#main-banner {
+	min-height: 80px;
+	background: #fefffc;
+	padding: 11px 0px;
+}
+#main-area {
+	background-image: url("../img/img1.jpg");
+	background-size: cover;
+	background-position: center;
+}
+#selector-panel {
+	background-color: #00365e;
+	padding: 15px 10% 15px 10%;
+}
+#booking-type, #booking-from, #booking-to, #booking-date1, #booking-date2, #booking-button {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #f5f5f5;
+	margin-top: 16px;
+	padding: 10px;
+	font-size: 16px;
+	background: none;
+	color: #f5f5f5;
+	width: 100%;
+	min-width: 200px;
+}
+#booking-type {
+	appearance: none;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('../img/arrow.png') no-repeat;
+    background-position: 90% 50%;
+    background-size: 14px;
+    cursor: pointer;
+}
+option {
+	background-color: #00365e;
+}
+#booking-button {
+	border-color: #ffc50b;
+	background: #ffc50b;
+	color: #00365e;
+	margin-bottom: 10px;
+}
+#booking-button:hover {
+	border-color: #f5f5f5;
+	background: #0065b8;
+	color: #f5f5f5;
+}
+#booking-button:active {
+	background: #00365e;
+}
+@media (min-width: 768px) {
+	#selector-panel {
+		padding: 15px 80px 15px 30px;
+	}
+}
+#banner-logo {
+	margin-left: 8.33333333%;
+	height: 50px;
+	width: auto;
+	float: left;
+}
+@media (min-width: 768px) {
+	#banner-logo {
+		margin-left: 40px;
+	}
+}
+@media (min-width: 992px) {
+	#banner-logo {
+		margin-left: 80px;
+	}
+}
+#main-nav {
+    width: 200px;
+    height: auto;
+    position: fixed;
+    top: 0px;
+    left: -200px;
+    background: #f5f5f5;
+    padding: 0px;
+}
+#main-nav ul {
+	padding: 0px;
+	margin: 0px;
+	clear: both;
+}
+#main-nav li {
+	list-style-type: none;
+	width: 100%;
+	border-bottom: 1px solid #dcdcdc;
+}
+#main-nav ul a {
+	padding: 10px 0px 10px 15px;
+	display: block;
+	text-decoration: none;
+	font-size: 16px;
+}
+#main-nav ul a:hover {
+	color: #f5f5f5;
+}
+#main-nav li:hover {
+	background: #00365e;
+}
+#main-nav .fa-angle-right {
+	display: inline;
+	float: right;
+	color: #dcdcdc;
+	margin-top: 3px;
+	margin-right: 10px;
+}
+@media (min-width: 768px) {
+	#main-nav {
+	    width: auto;
+	    height: auto;
+	    position: relative;
+	    top: 18px;
+	    left: 0px;
+	    background: none;
+	    padding: 0px;
+	}
+	#main-nav ul {
+		margin-top: 18px;
+		padding: 0px;
+		float: left;
+		margin: 0px;
+		clear: none;
+	}
+	#main-nav li {
+		margin-left: 10px;
+		list-style-type: none;
+		display: inline;
+		width: auto;
+		border: none;
+	}
+	#main-nav li:first-child {
+		margin-left: 30px;
+	}
+	#main-nav li:hover {
+		background: none;
+	}
+	#main-nav ul a {
+		padding: 0px 2px 2px 2px;
+		font-size: 16px;
+		color: #0065b8;
+		text-decoration: none;
+		display: inline;
+	}
+	#main-nav ul a:hover {
+		color: #00365e;
+		text-decoration: none;
+		border-bottom: 3px solid #ffc50b;
+	}
+	#main-nav ul a:active {
+		color: #0065b8;
+		text-decoration: none;
+	}
+	#main-nav .fa-angle-right {
+		display: none;
+	}
+}
+@media (min-width: 992px) {
+	#main-nav li {
+		margin-left: 20px;
+	}
+	#main-nav li:first-child {
+		margin-left: 40px;
+	}
+}
+.h-list li {
+	list-style-type: none;
+	display: inline;
+}
+#contact-bar {
+	display: none;
+}
+#contact-list-item .fa-chevron-down {
+	display: none;
+}
+@media (min-width: 768px) {
+	#contact-list-item .fa-chevron-down {
+	display: inline;
+	font-size: 11px;
+	position: relative;
+	bottom: 2px;
+	left: 1px;
+	}
+}
+@media (min-width: 992px) {
+	#contact-list-item {
+	display: none!important;
+	}
+	#contact-bar {
+	display: block;
+	}
+	#contact-bar {
+	float: left;
+	position: fixed;
+	left: 75%;
+	padding-top: 3px;
+	}
+	#contact-bar ul {
+		padding: 0px;
+	}
+	#contact-bar i {
+		border-style: solid;
+		border-width: 2px;
+		border-color: #f5f5f5;
+		padding: 5px 15px;
+		color: #00365e;
+		cursor: pointer;
+		border-radius: 2px;
+	}
+	#contact-bar i:hover {
+		color: #0065b8;
+	}
+	#contact-bar li {
+		list-style-type: none;
+		display: inline;
+		padding: 0px;
+	}
+}
+#top-banner {
+	padding: 0px;
+}
+#top-nav ul {
+	padding: 0px 0px 0px 10px;
+}
+#top-nav a {
+	font-family: "robotoregular";
+	font-size: 11px;
+	color: #f5f5f5;
+	padding-right: 7px;
+	line-height: 30px;
+}
+#follow-full-panel {
+	height: 100px;
+	background: #dcdcdc;
+}
+#left-half-panel {
+	height: 300px;
+	background: #ffc50b;
+}
+#right-half-panel {
+	height: 300px;
+	background: #0065b8;
+}
+.destination-box {
+	height: 200px;
+	background: #f5f5f5;
+	border: 1px solid red;
+}
+footer div {
+	height: 200px;
+	background: #00365e;
+	border: 1px solid red;
+}
+body {
+	background: #fefffc;
+}
+#main-nav-header {
+	width: 100%;
+	min-height: 80px;
+	display: block;
+}
+#mobile-nav-title {
+	position: absolute;
+	font-size: 26px;
+	margin-top: 22px;
+	margin-left: 15px;
+	color: #00365e;
+}
+@media (min-width: 768px) {
+	#main-nav-header {
+		display: none;
+	}
+}
+.dark-overlay {
+	position: absolute;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.6);
+	height: 100%;
+	width: 100%;
+}
+.dark-overlay:hover {
+	background-color: rgba(0, 0, 0, 0.65);
+	cursor: pointer;
+}
+@media (min-width: 768px) {
+	.dark-overlay {
+		display: none;
+	}
+}
+#social-links {
+	float: right;
+}
